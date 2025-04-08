@@ -54,7 +54,7 @@ public class Lab4Q1 {
 			marks[i] = sc.nextInt();
 		}
 		
-		STUDENTT STUDENTT = new STUDENTT("Athang", marks);
+		STUDENTT STUDENTT = new STUDENTT("Shlok", marks);
 		STUDENTT.compute();
 		STUDENTT.dislay();
 
