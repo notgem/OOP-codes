@@ -1,47 +1,52 @@
-package codes;
 
-import java.util.Scanner;
+package lab3;
+import java.util.*;
 
-class STUDENTClass {
-    String sname;
-    int[] marks_array = new int[5];
-    int total = 0;
-    float avg;
-
-    void assign() {
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Enter student name: ");
-        sname = sc.nextLine();
-        System.out.println("Enter 5 subject marks:");
-        for (int i = 0; i < 5; i++) {
-            marks_array[i] = sc.nextInt();
-        }
-    }
-
-    void compute() {
-        total = 0;
-        for (int mark : marks_array) {
-            total += mark;
-        }
-        avg = total / 5.0f;
-    }
-
-    void display() {
-        System.out.println("Student Name: " + sname);
-        System.out.println("Marks: ");
-        for (int mark : marks_array) {
-            System.out.print(mark + " ");
-        }
-        System.out.println("\nTotal: " + total);
-        System.out.println("Average: " + avg);
-    }
+public class STUDENT 
+{
+		
+		String sname;
+		int[] marks=new int[5];
+		int total;
+		double avg;
+		void assign()
+		{
+			Scanner sc=new Scanner(System.in);
+			System.out.println("Enter name");
+			sname=sc.nextLine();
+			for(int i=0;i<5;i++)
+			{
+				System.out.println("Enter marks obtained in subject "+(i+1));
+				marks[i]=sc.nextInt();
+			}
+			
+		}
+		void compute()
+		{
+			for(int i=0;i<5;i++)
+				total=total+marks[i];
+			avg=total/5;
+		}
+		
+		void display()
+		{
+			System.out.println("Name: "+sname);
+			System.out.println("Marks obtained: ");
+			for(int i=0;i<5;i++)
+				System.out.println(marks[i]);
+			System.out.println("Avg: "+avg);
+			System.out.println("Total: "+total);
+			
+		}
+		public static void main(String[] args) 
+		{
+			STUDENT st=new STUDENT();	
+			st.assign();
+			st.compute();
+			st.display();
+		}
+		
 }
 
-public class Lab3Q1 {
-    public static void main(String[] args) {
-        STUDENTClass s1 = new STUDENTClass();
-        s1.assign();
-        s1.compute();
-        s1.display();
-    }
-}
+
+
