@@ -75,8 +75,8 @@ public class Lab7Q1 {
 
 	public static void main(String[] args) {
 		
-		ScienceStudent s1 = new ScienceStudent("Athang", 10, 50, 10);
-		ArtsStudent s2 = new ArtsStudent("Kaustubh", "English", 50, 10);
+		ScienceStudent s1 = new ScienceStudent("Shlok", 10, 50, 10);
+		ArtsStudent s2 = new ArtsStudent("piyush", "English", 50, 10);
 		
 		studentclass studentRef;
 	
