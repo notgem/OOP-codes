@@ -1,0 +1,36 @@
+public class StudentAgeValidationDemo {
+
+    // Student class with private attributes
+    static class Student {
+        private String name;
+        private int age;
+
+        // Method to register the student
+        public void registerStudent(String name, int age) throws IllegalArgumentException {
+            // Validate age
+            if (age < 18 || age > 60) {
+                throw new IllegalArgumentException("Invalid age! Age must be between 18 and 60.");
+            }
+            this.name = name;
+            this.age = age;
+            System.out.println("Student registered successfully: " + name + ", Age: " + age);
+        }
+    }
+
+    public static void main(String[] args) {
+        // Create an instance of the Student class
+        Student student = new Student();
+        
+        try {
+            // Try to register with a valid age
+            student.registerStudent("John Doe", 25);
+            
+            // Try to register with an invalid age
+            student.registerStudent("Alice Smith", 65);  // Invalid age, should throw exception
+            
+        } catch (IllegalArgumentException e) {
+            // Catch and display the error message for invalid input
+            System.out.println("Error: " + e.getMessage());
+        }
+    }
+}
