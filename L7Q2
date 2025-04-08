@@ -68,8 +68,8 @@ public class Lab7Q2 {
 
 	public static void main(String[] args) {
 		
-		FullTimeEMPLOYEE e1 = new FullTimeEMPLOYEE("Athang", 10000, 2000);
-		PartTimeEMPLOYEE e2 = new PartTimeEMPLOYEE("Kaustubh", 104);
+		FullTimeEMPLOYEE e1 = new FullTimeEMPLOYEE("Shlok", 10000, 2000);
+		PartTimeEMPLOYEE e2 = new PartTimeEMPLOYEE("Piyush", 104);
 		
 		e1.calculateSalary();
 		e1.displayEmployeeDetails();
